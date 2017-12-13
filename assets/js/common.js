@@ -132,7 +132,9 @@ const common = {
     wx[method]({
       url: url + params,
       complete: () => {
-        this.IsPageNavigating = false;
+        setTimeout(()=>{
+          this.IsPageNavigating = false;
+        },300)
       }
     });
   }
